@@ -7,18 +7,119 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Todo app</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    body{
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    
+    }
+    section{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+    }
+    #todo-element{
+      background-color: white;
+      width: 600px;
+      height: 400px;
+      position: absolute;
+      top : 75%;
+      left: 30%;
+      border-radius: 15px;
+      
+    }
+    #upper-header{
+      position: relative;
+      margin: 0;
+      text-align: center;
+
+    }
+    #bottom-header{
+      background-color: hsl(0, 0%, 98%);
+      width: 100%;
+      height:100vh;
+      margin: 0;
+    }
+    h1{
+      position:absolute;
+      bottom: 50%;
+      right: 65%;
+    }
+    .list-group{
+      background-color: white;
+      border-radius: 0;
+    }
+    .input-group{
+      position:absolute;
+      bottom: 30%;
+      left: 30%;
+   
+      width: 600px;
+      border-radius: 15px;
+     
+
+    }
+    .list-group-item{
+      display: flex;
+      flex-direction: row;
+     
+    }
+
+    
   </style>
 </head>
 <body>
+ 
+ 
+<div id = "upper-header">
+  
+  <img src="images/bg-desktop-light.jpg">
+  <h1>ToDo</h1>
+  <div class="input-group mb-3">
+    <!-- <div class="input-group-prepend">
 
-  Todo
 
-  <!-- Add dynamic number --> items left
+    </div> -->
+   
+    <input type="text" class="form-control" placeholder="Create a new to do " aria-label="Example text with button addon" aria-describedby="button-addon1" name="todo-input">
+  </div>
+  <div id="todo-element">
+    
+      
+      <li class="list-group-item"><input type="checkbox" id="item1">
+        <label for="item1">Task 1</label></li>
+      <!-- <li class="list-group-item">Dapibus ac facilisis in</li>
+      <li class="list-group-item">Morbi leo risus</li>
+      <li class="list-group-item">Porta ac consectetur ac</li>
+      <li class="list-group-item">Vestibulum at eros</li>
+    </ul> -->
+  </div>
+  
+
+</div>
+<div id ="bottom-header">
+
+</div>
+<section>
+
+
+</section>
+
+
+
+  <!-- Todo
+
+  Add dynamic number items left
 
   All
   Active 
@@ -26,7 +127,7 @@
 
   Clear Completed
 
-  Drag and drop to reorder list
+  Drag and drop to reorder list -->
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
