@@ -12,6 +12,9 @@
   <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    :root{
+      --linear : linear-gradient(hsl(192, 100%, 67%) ,hsl(280, 87%, 65%) );
+    }
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
     body{
@@ -32,7 +35,7 @@
     #todo-element{
       background-color: white;
       width: 600px;
-      height: 400px;
+      height: fit-content;
       position: absolute;
       top : 75%;
       left: 30%;
@@ -75,6 +78,33 @@
       flex-direction: row;
      
     }
+    .btn-sm{
+      background-color:white ;
+      color: rgb(178, 178, 178);
+      border: none;
+
+
+    }
+    .btn-sm:hover{
+      background-color:white ;
+      color: rgb(178, 178, 178);
+      border: none;
+
+    }
+    .buttons{
+      display: flex;
+      background-color: white;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 600px;
+      /* left: 30%; */
+      position: absolute;
+      border-radius: .25rem;   }
+    .task{
+      
+     
+        
+      }
 
     
   </style>
@@ -95,17 +125,34 @@
   
   <div id="todo-element">
     
-      
+    <div class="group">
       <li class="list-group-item">
-        <input type="checkbox" id="item1">
+        <input type="checkbox" id="item1" class="task">
         <label for="item1">Task 1</label>
       </li>
+
+    </div>  
+     
       <!-- <li class="list-group-item">Dapibus ac facilisis in</li>
       <li class="list-group-item">Morbi leo risus</li>
       <li class="list-group-item">Porta ac consectetur ac</li>
       <li class="list-group-item">Vestibulum at eros</li>-->
+      <div class="buttons">
+        <button type="button" class="btn btn-primary btn-sm remaining">Small button</button>
+      <div class="filter">
+        <button type="button" class="btn btn-primary btn-sm all-filter">All</button>
+        <button type="button" class="btn btn-primary btn-sm active-filter">Active</button>
+        <button type="button" class="btn btn-primary btn-sm completed-filter">Completed</button>
+      </div>
+      
+      <button type="button" class="btn btn-primary btn-sm clear-completed">Clear completed</button>
+    
+      </div>
+      
 
   </div>
+
+  
   
 
 </div>
